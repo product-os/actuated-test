@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  specs:
+    name: specs
+    # runs-on: actuated-arm64-2cpu-8gb
+    runs-on: actuated-2cpu-8gb
+    steps:
+      - uses: actions/checkout@v1
+      - name: Check specs
+        run: |
+          ./specs.sh
