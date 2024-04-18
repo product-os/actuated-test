@@ -31,3 +31,6 @@ jobs:
           driver-opts: network=host
           install: true
           version: v0.9.1
+
+      - name: Test kvm
+        run: ls -l /dev/kvm
