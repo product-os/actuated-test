@@ -34,3 +34,6 @@ speedtest-cli
 
 echo Checking Docker
 docker run alpine:latest cat /etc/os-release
+
+echo Checking User
+id
